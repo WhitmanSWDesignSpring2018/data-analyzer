@@ -1,0 +1,7 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Free for educational purposes
+<#if licenseLast??>
+${licenseLast}
+</#if>
