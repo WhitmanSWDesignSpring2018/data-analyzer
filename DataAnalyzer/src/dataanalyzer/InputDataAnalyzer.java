@@ -11,8 +11,7 @@ import java.util.logging.Logger;
 
 /**
  * Inputs numbers from a user and computes their average, minimum, and maximum.
- * We wanted the classes to have an inheritance relationship.
- * @author janet
+ * @author janetlndavis
  */
 public class InputDataAnalyzer extends DataAnalyzer {
     

@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 /**
  * Reads floating-point numbers from a file, one per line, and reports their
  * average, minimum, and maximum.
- * @author janet
+ * @author janetlndavis
  */
 public class FileDataAnalyzer extends DataAnalyzer {
     

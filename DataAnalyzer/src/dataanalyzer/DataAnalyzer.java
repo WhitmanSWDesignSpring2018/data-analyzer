@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 /**
  * Maintains a collection of floating-point numbers to compute
  * their average, minimum, and maximum.
- * @author janet
+ * @author janetlndavis
  */
 public class DataAnalyzer {
 
