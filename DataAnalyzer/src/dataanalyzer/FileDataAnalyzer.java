@@ -25,17 +25,22 @@ public class FileDataAnalyzer extends DataAnalyzer {
      * @throws IOException
      */
     private void readData(String filename) throws FileNotFoundException, IOException {
+        // Try-with-resources has an implied finally block to clean up resource
         try (BufferedReader in = new BufferedReader(new FileReader(filename))) {
             String line = in.readLine();
             while (line != null) {
                 try {
                     add(Double.parseDouble(line));
                 } catch (NumberFormatException ex) {
-                    // Ignore
+                    // NumberFormatException is an unchecked exception
+                    // Instead of crashing, ignore non-numeric data in input file
+                    System.out.println("Warning: non-numeric data '" + line + "'");
                 }
                 line = in.readLine();
             }
         } 
+        // Do not catch FileNotFoundException or IOException
+        // - handle in main instead
     }
     
     /**
