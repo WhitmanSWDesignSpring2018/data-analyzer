@@ -6,6 +6,7 @@ package dataanalyzer;
 import java.util.ArrayList;
 import java.util.List;
 import dataanalyzer.DataAnalyzer;
+import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,6 +45,19 @@ public class DataAnalyzer {
         }
         
         double sum = 0;
+        /* Do not use this loop style with collections -
+           depending on the collection implementation, 
+           it might take O(n^2) running time due to get() method
+        for (int i=0; i < collection.size(); i++) {
+            sum += collection.get(i);
+        }
+        for (Iterator<Double> iter = collection.iterator();
+             iter.hasNext(); ) {
+            // Note iter.next() gets item and advances iterator
+            sum += iter.next(); 
+        }
+        The final loop is shorthand for the above.
+        */        
         for (double val : collection) {
             sum += val;
         }
